@@ -8,17 +8,15 @@ const NavBar = ({ handleSignout }) => {
     <>
       {user ? (
         <nav>
-          <ul>
-            <li>Welcome, {user.username}</li>
-            <li>
-              <Link to="/">Dashboard</Link>
-            </li>
-            <li>
+            <h2>Welcome, {user.username}</h2>
+            <div className='navbar'>
+              <Link to="/">Dashboard</Link> || 
+              <Link to="/posts">Posts</Link> || 
+              <Link to="/posts/new">New Post</Link> || 
               <Link to="" onClick={handleSignout}>
                 Sign Out
               </Link>
-            </li>
-          </ul>
+            </div>
         </nav>
       ) : (
         <nav>
